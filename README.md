@@ -116,6 +116,7 @@ export default class DependencyContainer {
 }
 ```
 Так как после компиляции типы не будут доступы в коде js, то нет нативного способа в run time получить типы параметров конструктора ( ну или я не нашел:) ).
+
 ![untyped-params](./read-elems/untyped-params.png)
 Поэтому буду использовать библиотеку reflect-metadata, методы которой такую возможность предоставляют.
 
@@ -131,7 +132,9 @@ export default class DependencyContainer {
 }
 ```
 Результат:
+
 ![array with zero elements](./read-elems/arr0.png)
+
 Элементов 0, хотя MainClass имеет 3 прямых зависимости. Такой результат из-за того, что метод ожидает, что переданный класс будет декорирован специальным декоратором, который реализуем ниже:
 ```ts
 export const InjectableClass = (target) => {
@@ -224,8 +227,11 @@ export default class DependencyContainer {
 }
 ```
 Результат в консоли после выполнения кода со статическим внедрением зависимостей (начальная реализация)
+
 ![non DI result](./read-elems/non-DI-result.png)
+
 Итоговый результат:
+
 ![DI result](./read-elems/DI-result.png)
 
 Как видно объекты инжектируемых классов создаются 1 раз. Внедрение зависимостей работает.
@@ -242,6 +248,7 @@ const authObj = diContainer.resolve(AuthService);
 mainObj.check(); // ожидаем false
 ```
 Результат в консоли:
+
 ![non singleton DI result.png](./read-elems/non-singleton-DI-result.png)
 
 Результат говорит о том, что сервисы не Singleton.
@@ -276,10 +283,14 @@ export default class DependencyContainer extends Map {
 Отнаследовавшись от класса Map, у нас появилась возможность сохранять созданные объекты.
 
 Результат в консоли:
+
 ![last result.png](./read-elems/last-result.png)
+
 Как видно классы инстанцируются единожды, сколько бы мы ни создавали объектов, классы которых зависимы от других.
 
 ### Ссылки
 [внедрение зависимостей](https://medium.com/@xufocoder/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-de1367295ba8)
+
 [nehalist.io/dependency-injection-in-typescript](https://nehalist.io/dependency-injection-in-typescript/)
+
 [dependency-injection-di-container-in-typescript](https://medium.com/@OlegVaraksin/minimalistic-dependency-injection-di-container-in-typescript-2ce93d1c303b)
