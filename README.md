@@ -1,9 +1,7 @@
-# simpliest-DI-ts
-simpliest emplementation Dependency Injection on TypeScript
+# Dependency Injection
 
 _код представлен для изучения подхода_
 
-# Dependency Injection
 Это подход, который облегчает создание объектов в приложении.
 
 ### Пример
