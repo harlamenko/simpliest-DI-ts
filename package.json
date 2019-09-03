@@ -1,0 +1,30 @@
+{
+  "name": "simpliest-di-ts",
+  "version": "1.0.0",
+  "description": "simpliest emplementation Dependency Injection on TypeScript",
+  "main": "./dist/out-tsc/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harlamenko/simpliest-DI-ts.git"
+  },
+  "keywords": [
+    "DI",
+    "TS",
+    "Dependency",
+    "Injection",
+    "Container"
+  ],
+  "author": "Kharlamenko Artem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harlamenko/simpliest-DI-ts/issues"
+  },
+  "homepage": "https://github.com/harlamenko/simpliest-DI-ts#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^1.10.0"
+  }
+}
