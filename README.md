@@ -152,7 +152,7 @@ export const InjectableClass = (target: ConstructorType<any>) => {
 }
 ```
 
-Необходимо заметить, что подход DI подразумевает от мануального использования оператора new. Учитывая это, немного изменим наш пример:
+Необходимо заметить, что подход DI подразумевает отказ от мануального использования оператора new. Учитывая это, немного изменим наш пример:
 ```ts
 import DependencyContainer from './dependency-container';
 import { InjectableClass } from './util';
