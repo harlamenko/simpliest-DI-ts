@@ -16,8 +16,8 @@ class HttpService {
 }
 
 class MainClass {
-  public _baseService: BaseService;
-  public _authService: AuthService;
+  private _baseService: BaseService;
+  private _authService: AuthService;
 
   constructor() {
     this._baseService = new BaseService();
@@ -27,7 +27,7 @@ class MainClass {
 }
 
 class BaseService {
-  public _httpService: HttpService;
+  private _httpService: HttpService;
 
   constructor() {
     this._httpService = new HttpService();
@@ -36,7 +36,7 @@ class BaseService {
 }
 
 class AuthService {
-  public _httpService: HttpService;
+  private _httpService: HttpService;
 
   constructor() {
     this._httpService = new HttpService();
@@ -63,9 +63,9 @@ class HttpService {
 
 class MainClass {
   constructor(
-    public _baseService: BaseService,
-    public _authService: AuthService,
-    public _httpService: HttpService,
+    private _baseService: BaseService,
+    private _authService: AuthService,
+    private _httpService: HttpService,
   ) {
     console.log(`MainClass is created.`);
   }
@@ -73,7 +73,7 @@ class MainClass {
 
 class BaseService {
   constructor(
-    public _httpService: HttpService,
+    private _httpService: HttpService,
   ) {
     console.log(`BaseService is created.`);
   }
@@ -81,7 +81,7 @@ class BaseService {
 
 class AuthService {
   constructor(
-    public _httpService: HttpService,
+    private _httpService: HttpService,
   ) {
     this._httpService = new HttpService();
     console.log(`AuthService is created.`);
@@ -170,7 +170,7 @@ class HttpService {
 
 class BaseService {
   constructor(
-    public _httpService: HttpService,
+    private _httpService: HttpService,
     ) {
       console.log(`BaseService is created.`);
   }
@@ -178,7 +178,7 @@ class BaseService {
 
 class AuthService {
   constructor(
-    public _httpService: HttpService,
+    private _httpService: HttpService,
     ) {
       this._httpService = new HttpService();
       console.log(`AuthService is created.`);
@@ -191,9 +191,9 @@ class AuthService {
 @InjectableClass
 class MainClass {
   constructor(
-    public _baseService: BaseService,
-    public _authService: AuthService,
-    public _httpService: HttpService,
+    private _baseService: BaseService,
+    private _authService: AuthService,
+    private _httpService: HttpService,
   ) {
     console.log(`MainClass is created.`);
   }
