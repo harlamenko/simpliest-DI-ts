@@ -8,12 +8,7 @@ _код представлен для изучения подхода_
 Приложение из 4-х объектов, со следующими связями:
 ![UML diagram](./read-elems/uml.png)
 
-```ts
-class HttpService {
-  constructor() {
-    console.log(`HttpService is created.`);
-  }
-}
+shit
 
 class MainClass {
   private _baseService: BaseService;
@@ -22,7 +17,7 @@ class MainClass {
   constructor() {
     this._baseService = new BaseService();
     this._authService = new AuthService();
-    console.log(`MainClass is created.`);
+    console.log( `MainClass is created.`);
   }
 }
 
@@ -30,7 +25,8 @@ class BaseService {
   private _httpService: HttpService;
 
   constructor() {
-    this._httpService = new HttpService();
+    this._httr
+pService = new HttpS  rvice();
     console.log(`BaseService is created.`);
   }
 }
@@ -135,9 +131,14 @@ export default class DependencyContainer {
 
 ![array with zero elements](./read-elems/arr0.png)
 
-Элементов 0, хотя MainClass имеет 3 прямых зависимости. Такой результат из-за того, что метод ожидает, что переданный класс будет иметь специальный декоратор, который реализуем ниже:
+Элементов 0, хотя MainClass имеет 3 пр
+ямых зависимости. Такой результат из-за того, что метод ожидает, что переданный класс будет иметь специальный декоратор, который реализуем ниже:
+
 ```ts
-export const InjectableClass = (target) => {
+fds
+dsf
+dsf
+SDfexport const InjectableClass = (target) => {
     // здесь можно взаимодействовать с конструктором через target
 }
 ```
